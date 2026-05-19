@@ -4,18 +4,26 @@
  *
  * @author Dev Gui
  */
-import { DEVELOPER_MODE } from "../config.js";
+import { DEVELOPER_MODE, OWNER_LID } from "../config.js";
 import { badMacHandler } from "../utils/badMacHandler.js";
-import { checkIfMemberIsMuted } from "../utils/database.js";
+import { checkIfMemberIsMuted, getPrefix } from "../utils/database.js";
 import { dynamicCommand } from "../utils/dynamicCommand.js";
 import {
   GROUP_PARTICIPANT_ADD,
   GROUP_PARTICIPANT_LEAVE,
   isAddOrLeave,
   isAtLeastMinutesInPast,
+  extractDataFromMessage,
 } from "../utils/index.js";
 import { loadCommonFunctions } from "../utils/loadCommonFunctions.js";
 import { errorLog, infoLog } from "../utils/logger.js";
+import {
+  isRentalActive,
+  isRentalRegistered,
+  shouldNotifyExpiration,
+  markAsNotified,
+} from "../utils/rental.js";
+import { processarComprovativo } from "../services/detector.js";
 import { customMiddleware } from "./customMiddleware.js";
 import { messageHandler } from "./messageHandler.js";
 import { onGroupParticipantsUpdate } from "./onGroupParticipantsUpdate.js";
@@ -73,6 +81,61 @@ export async function onMessagesUpsert({ socket, messages, startProcess }) {
 
         return;
       }
+
+      // ─── VERIFICAÇÃO DO SISTEMA DE ALUGUEL ───────────────────────────
+      const remoteJid = webMessage.key?.remoteJid;
+      const isGroup = remoteJid?.endsWith("@g.us");
+
+      const { userLid, fullMessage } = extractDataFromMessage(webMessage);
+
+      const isOwner = userLid === OWNER_LID;
+
+      if (isGroup && !isOwner) {
+        const groupPrefix = getPrefix(remoteJid);
+        const hasPrefix = fullMessage?.startsWith(groupPrefix);
+
+        if (!isRentalRegistered(remoteJid)) {
+          if (hasPrefix) {
+            await socket.sendMessage(remoteJid, {
+              text:
+                "╭━━⪩ *SEM PLANO ATIVO* ⪨━━\n▢ ⚠️ Este grupo *não possui* um *plano ativo*!\n▢ Para adquirir um plano, entre em *contacto*:\n▢ 📞 +258 83 425 4136\n▢ 👤 *Jovem*\n╰━━─「⏳」─━━",
+            });
+          }
+          continue;
+        }
+
+        if (shouldNotifyExpiration(remoteJid)) {
+          markAsNotified(remoteJid);
+
+          if (hasPrefix) {
+            await socket.sendMessage(remoteJid, {
+              text:
+                "╭━━⪩ *PLANO EXPIRADO* ⪨━━\n▢ ⚠️ O plano deste grupo *expirou*!\n▢ Para renovar, entre em *contacto*:\n▢ 📞 +258 83 425 4136\n▢ 👤 *Jovem*\n╰━━─「⏳」─━━",
+            });
+          }
+          continue;
+        }
+
+        if (!isRentalActive(remoteJid)) {
+          continue;
+        }
+      }
+      // ─────────────────────────────────────────────────────────────────
+
+      // ─── DETECTOR DE COMPROVATIVOS ────────────────────────────────────
+      if (isGroup && webMessage?.message) {
+        const detectado = await processarComprovativo({
+          socket,
+          webMessage,
+          remoteJid,
+          userLid,
+          fullMessage,
+        });
+
+        if (detectado) continue;
+      }
+      // ─────────────────────────────────────────────────────────────────
+
       if (
         checkIfMemberIsMuted(
           webMessage?.key?.remoteJid,

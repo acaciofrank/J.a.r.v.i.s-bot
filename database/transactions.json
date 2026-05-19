@@ -1,0 +1,227 @@
+{
+  "120363425441999694@g.us": {
+    "processedIds": [
+      {
+        "id": "DED8K44AVNG",
+        "memberLid": "210097535983683@lid",
+        "processedAt": "2026-05-13T08:20:51.758Z",
+        "time": "10:20:51"
+      },
+      {
+        "id": "PP260512.2000.H95187",
+        "memberLid": "19378993119260@lid",
+        "processedAt": "2026-05-13T09:14:20.993Z",
+        "time": "11:14:20"
+      },
+      {
+        "id": "PP260517.2242.b20301",
+        "memberLid": "210097535983683@lid",
+        "processedAt": "2026-05-18T03:31:27.943Z",
+        "time": "05:31:27"
+      },
+      {
+        "id": "DEH3K5XPD43",
+        "memberLid": "19378993119260@lid",
+        "processedAt": "2026-05-18T03:38:46.277Z",
+        "time": "05:38:46"
+      },
+      {
+        "id": "PP260517.2148.T57341",
+        "memberLid": "210097535983683@lid",
+        "processedAt": "2026-05-18T03:39:28.243Z",
+        "time": "05:39:28"
+      },
+      {
+        "id": "DEH2K5XPD43",
+        "memberLid": "19378993119260@lid",
+        "processedAt": "2026-05-18T03:46:59.299Z",
+        "time": "05:46:59"
+      },
+      {
+        "id": "PP260516.2148.T57341",
+        "memberLid": "19378993119260@lid",
+        "processedAt": "2026-05-18T03:47:36.309Z",
+        "time": "05:47:36"
+      },
+      {
+        "id": "PP260596.2148.T57341",
+        "memberLid": "19378993119260@lid",
+        "processedAt": "2026-05-18T04:02:37.936Z",
+        "time": "06:02:37"
+      },
+      {
+        "id": "PP260996.2148.T57341",
+        "memberLid": "19378993119260@lid",
+        "processedAt": "2026-05-18T04:13:29.566Z",
+        "time": "06:13:29"
+      },
+      {
+        "id": "PP260596.2148.T57941",
+        "memberLid": "19378993119260@lid",
+        "processedAt": "2026-05-18T04:25:19.892Z",
+        "time": "06:25:19"
+      },
+      {
+        "id": "PP260596.2148.T27341",
+        "memberLid": "19378993119260@lid",
+        "processedAt": "2026-05-18T04:27:51.954Z",
+        "time": "06:27:51"
+      }
+    ],
+    "pending": {
+      "ACAFA3A4DA07FCAB91B82ACBCC4507EE": {
+        "vouchers": [
+          {
+            "id": "DEH3K5XPD43",
+            "amount": 25,
+            "account": "842398403",
+            "date": "17/5/26",
+            "type": "mpesa"
+          }
+        ],
+        "total": 25,
+        "product": {
+          "index": 4,
+          "category": "Geral",
+          "description": "1.024 𝗠𝗕",
+          "price": 25
+        },
+        "userLid": "19378993119260@lid",
+        "isPartial": false,
+        "savedAt": "2026-05-18T03:38:46.279Z"
+      },
+      "A578C741944458ACDAC1E135B6E89FE8": {
+        "vouchers": [
+          {
+            "id": "PP260517.2148.T57341",
+            "amount": 10,
+            "account": "870835632",
+            "date": null,
+            "type": "emola"
+          }
+        ],
+        "total": 10,
+        "product": {
+          "index": 1,
+          "category": "Geral",
+          "description": "400 𝗠𝗕",
+          "price": 10
+        },
+        "userLid": "210097535983683@lid",
+        "isPartial": false,
+        "savedAt": "2026-05-18T03:39:28.303Z"
+      },
+      "AC963A0B0BF866230CBC8F5587657060": {
+        "vouchers": [
+          {
+            "id": "PP260596.2148.T27341",
+            "amount": 140,
+            "account": "870835632",
+            "date": null,
+            "type": "emola"
+          }
+        ],
+        "total": 140,
+        "product": {
+          "index": 18,
+          "category": "Semanal",
+          "description": "5.2 𝗚𝗕",
+          "price": 140
+        },
+        "userLid": "19378993119260@lid",
+        "isPartial": false,
+        "savedAt": "2026-05-18T04:27:51.955Z"
+      }
+    },
+    "members": {
+      "210097535983683@lid": {
+        "memberLid": "210097535983683@lid",
+        "memberName": "210097535983683",
+        "totalPurchases": 2,
+        "totalMb": 400,
+        "totalAmount": 35,
+        "todayKey": "2026-05-18",
+        "todayPurchases": 1,
+        "todayMb": 400,
+        "history": [
+          {
+            "date": "2026-05-13T08:21:35.069Z",
+            "mb": 0,
+            "amount": 25,
+            "transactionIds": [
+              "DED8K44AVNG"
+            ]
+          },
+          {
+            "date": "2026-05-18T03:31:48.939Z",
+            "mb": 400,
+            "amount": 10,
+            "transactionIds": [
+              "PP260517.2242.b20301"
+            ]
+          }
+        ]
+      },
+      "19378993119260@lid": {
+        "memberLid": "19378993119260@lid",
+        "memberName": "19378993119260",
+        "totalPurchases": 6,
+        "totalMb": 5.2,
+        "totalAmount": 1020,
+        "todayKey": "2026-05-18",
+        "todayPurchases": 5,
+        "todayMb": 5.2,
+        "history": [
+          {
+            "date": "2026-05-13T09:14:33.624Z",
+            "mb": 800,
+            "amount": 20,
+            "transactionIds": [
+              "PP260512.2000.H95187"
+            ]
+          },
+          {
+            "date": "2026-05-18T03:48:16.080Z",
+            "mb": 5.2,
+            "amount": 140,
+            "transactionIds": [
+              "PP260516.2148.T57341"
+            ]
+          },
+          {
+            "date": "2026-05-18T03:48:22.657Z",
+            "mb": 1.024,
+            "amount": 25,
+            "transactionIds": [
+              "DEH2K5XPD43"
+            ]
+          },
+          {
+            "date": "2026-05-18T04:03:28.045Z",
+            "mb": 5.2,
+            "amount": 140,
+            "transactionIds": [
+              "PP260596.2148.T57341"
+            ]
+          },
+          {
+            "date": "2026-05-18T04:13:58.792Z",
+            "mb": null,
+            "amount": 555,
+            "transactionIds": [
+              "PP260996.2148.T57341"
+            ]
+          },
+          {
+            "date": "2026-05-18T04:25:28.014Z",
+            "mb": 5.2,
+            "amount": 140,
+            "transactionIds": [
+              "PP260596.2148.T57941"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

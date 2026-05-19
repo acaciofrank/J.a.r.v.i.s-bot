@@ -37,6 +37,16 @@ export function menuMessage(groupJid) {
 
 ╭━━⪩ ADMINS ⪨━━
 ▢
+▢ • ${prefix}products
+▢ • ${prefix}set-product
+▢ • ${prefix}remove-product
+▢ • ${prefix}setmpesa
+▢ • ${prefix}setemola
+▢ • ${prefix}setbim
+▢ • ${prefix}remmpesa
+▢ • ${prefix}rememola
+▢ • ${prefix}rembim
+▢ • ${prefix}contas
 ▢ • ${prefix}abrir
 ▢ • ${prefix}add-auto-responder
 ▢ • ${prefix}agendar-mensagem

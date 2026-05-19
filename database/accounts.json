@@ -1,0 +1,50 @@
+{
+  "120363425441999694@g.us": {
+    "groupName": "J.A.R.V.I.S V1",
+    "groupId": "120363425441999694@g.us",
+    "emola": [
+      {
+        "index": 1,
+        "number": "870835632",
+        "name": "Acácio"
+      }
+    ],
+    "mpesa": [
+      {
+        "index": 1,
+        "number": "842398403",
+        "name": "Acacio"
+      },
+      {
+        "index": 2,
+        "number": "842398403",
+        "name": "Acacio"
+      },
+      {
+        "index": 3,
+        "number": "258842398403",
+        "name": "Acácio"
+      }
+    ],
+    "bim": []
+  },
+  "120363417287025928@g.us": {
+    "groupName": "𝙊𝙁𝙀𝙍𝙏𝘼𝙎 𝙑𝙊𝘿𝘼𝘾𝙊𝙈",
+    "groupId": "120363417287025928@g.us",
+    "emola": [
+      {
+        "index": 1,
+        "number": "870835632",
+        "name": "Acácio"
+      }
+    ],
+    "mpesa": [
+      {
+        "index": 1,
+        "number": "842398403",
+        "name": "Acácio"
+      }
+    ],
+    "bim": []
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "120363425441999694@g.us": {
+    "active": true,
+    "groupName": "J.A.R.V.I.S V1",
+    "processedIds": [
+      {
+        "id": "PP269518.0756.s70530",
+        "memberLid": "210097535983683@lid",
+        "processedAt": "2026-05-19T04:03:18.078Z",
+        "time": "06:03:18"
+      }
+    ],
+    "pending": {
+      "A5E20743F045A44B58EDDA6433050403": {
+        "vouchers": [
+          {
+            "id": "PP269518.0756.s70530",
+            "amount": 220,
+            "account": "870835632",
+            "date": null,
+            "type": "emola"
+          }
+        ],
+        "total": 220,
+        "product": {
+          "index": 27,
+          "category": "Tudo Top",
+          "description": "Chamadas + SMS",
+          "price": 220
+        },
+        "userLid": "210097535983683@lid",
+        "isPartial": false,
+        "extraNumber": "846119475",
+        "waitingNumber": false,
+        "savedAt": "2026-05-19T04:03:18.246Z"
+      }
+    },
+    "members": {},
+    "salesHistory": []
+  }
+}
