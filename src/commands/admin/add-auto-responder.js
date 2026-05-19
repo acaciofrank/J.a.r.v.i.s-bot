@@ -5,7 +5,7 @@ import { addAutoResponderItem } from "../../utils/database.js";
 export default {
   name: "add-auto-responder",
   description: "Adiciona um termo no auto-responder",
-  commands: ["add-auto-responder", "add-auto", "add-responder"],
+  commands: ["add-auto-responder", "addnano", "add-auto", "add-responder"],
   usage: `${PREFIX}add-auto-responder termo / o que eu devo responder`,
   /**
    * @param {CommandHandleProps} props
