@@ -238,8 +238,10 @@ export function getPrefix(groupJid) {
 }
 
 // ─── AUTO-RESPONDER POR GRUPO ─────────────────────────────────────────────────
+// groupId é opcional — se não passado usa "global" (compatibilidade com testes)
 
 export function getAutoResponderResponse(groupId, match) {
+  if (match === undefined) { match = groupId; groupId = "global"; }
   const responses = readJSON(AUTO_RESPONDER_FILE, {});
   const groupResponses = responses[groupId] || [];
   const matchUpperCase = match.toLocaleUpperCase();
@@ -251,6 +253,7 @@ export function getAutoResponderResponse(groupId, match) {
 }
 
 export function addAutoResponderItem(groupId, match, answer) {
+  if (answer === undefined) { answer = match; match = groupId; groupId = "global"; }
   const responses = readJSON(AUTO_RESPONDER_FILE, {});
   if (!responses[groupId]) responses[groupId] = [];
   const matchUpperCase = match.toLocaleUpperCase();
@@ -264,6 +267,7 @@ export function addAutoResponderItem(groupId, match, answer) {
 }
 
 export function listAutoResponderItems(groupId) {
+  if (!groupId) groupId = "global";
   const responses = readJSON(AUTO_RESPONDER_FILE, {});
   const groupResponses = responses[groupId] || [];
   return groupResponses.map((item, index) => ({
@@ -274,6 +278,7 @@ export function listAutoResponderItems(groupId) {
 }
 
 export function removeAutoResponderItemByKey(groupId, key) {
+  if (key === undefined) { key = groupId; groupId = "global"; }
   const responses = readJSON(AUTO_RESPONDER_FILE, {});
   if (!responses[groupId]) return false;
   const index = key - 1;
