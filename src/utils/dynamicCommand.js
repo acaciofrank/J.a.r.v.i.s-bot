@@ -98,7 +98,7 @@ export async function dynamicCommand(paramsHandler, startProcess) {
       !hasTypeAndCommand({ type, command })
     ) {
       if (isActiveAutoResponderGroup(remoteJid)) {
-        const response = getAutoResponderResponse(fullMessage);
+        const response = getAutoResponderResponse(remoteJid, fullMessage);
 
         if (response) {
           await sendReply(response);

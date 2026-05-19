@@ -8,6 +8,12 @@
         "memberLid": "210097535983683@lid",
         "processedAt": "2026-05-19T04:03:18.078Z",
         "time": "06:03:18"
+      },
+      {
+        "id": "PP260519.0932.O33533",
+        "memberLid": "210097535983683@lid",
+        "processedAt": "2026-05-19T08:14:02.377Z",
+        "time": "10:14:02"
       }
     ],
     "pending": {
@@ -35,6 +41,61 @@
         "savedAt": "2026-05-19T04:03:18.246Z"
       }
     },
+    "members": {
+      "210097535983683@lid": {
+        "memberLid": "210097535983683@lid",
+        "memberName": "210097535983683",
+        "totalPurchases": 1,
+        "totalMb": 1024,
+        "totalAmount": 25,
+        "todayKey": "2026-05-19",
+        "todayPurchases": 1,
+        "todayMb": 1024,
+        "history": [
+          {
+            "date": "2026-05-19T08:15:01.050Z",
+            "mb": 1024,
+            "amount": 25,
+            "transactionIds": [
+              "PP260519.0932.O33533"
+            ]
+          }
+        ]
+      }
+    },
+    "salesHistory": [
+      {
+        "date": "2026-05-19T08:15:01.050Z",
+        "dateKey": "2026-05-19",
+        "weekKey": "2026-05-16",
+        "monthKey": "2026-05",
+        "hour": 10,
+        "memberLid": "210097535983683@lid",
+        "memberName": "210097535983683",
+        "mb": 1024,
+        "amount": 25,
+        "transactionIds": [
+          "PP260519.0932.O33533"
+        ],
+        "category": "N/D",
+        "description": "N/D",
+        "isDiamond": false
+      }
+    ]
+  },
+  "120363424670968147@g.us": {
+    "active": true,
+    "groupName": "𝗦𝘁𝗼𝗰𝗸 𝐥𝐢𝐦𝐢𝐭𝐚𝐝𝐨",
+    "processedIds": [],
+    "pending": {},
+    "members": {},
+    "salesHistory": []
+  },
+  "120363417287025928@g.us": {
+    "active": true,
+    "groupName": "𝙊𝙁𝙀𝙍𝙏𝘼𝙎 𝙑𝙊𝘿𝘼𝘾𝙊𝙈",
+    "processedIds": [],
+    "pending": {},
     "members": {},
     "salesHistory": []
   }
